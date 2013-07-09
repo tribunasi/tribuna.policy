@@ -47,8 +47,6 @@ setup(
         'eea.tags',
         'collective.z3cform.widgets',
         'tribuna.content'
-
-
     ],
     extras_require={
         'test': [
