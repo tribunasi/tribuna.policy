@@ -42,6 +42,14 @@ setup(
         'plone.api',
         'setuptools',
         'z3c.jbot',
+        'plone.formwidget.captcha',
+        'plone.app.jquerytools',
+        'eea.tags',
+        'collective.z3cform.widgets',
+        'tribuna.theme',
+        'tribuna.content'
+
+
     ],
     extras_require={
         'test': [
