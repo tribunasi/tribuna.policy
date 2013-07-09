@@ -46,7 +46,6 @@ setup(
         'plone.app.jquerytools',
         'eea.tags',
         'collective.z3cform.widgets',
-        'tribuna.theme',
         'tribuna.content'
 
 
