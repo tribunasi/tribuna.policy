@@ -35,19 +35,19 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
+        'collective.z3cform.widgets',
+        'eea.tags',
         'five.grok',
         'five.pt',
         'Pillow',
         'Plone',
         'plone.api',
-        'setuptools',
-        'tribuna.diazotheme',
-        'z3c.jbot',
-        'plone.formwidget.captcha',
         'plone.app.jquerytools',
-        'eea.tags',
-        'collective.z3cform.widgets',
-        'tribuna.content'
+        'plone.formwidget.captcha',
+        'setuptools',
+        'tribuna.content',
+        'tribuna.diazotheme',
+        'z3c.jbot'
     ],
     extras_require={
         'test': [
@@ -59,6 +59,7 @@ setup(
             'coverage',
             'flake8',
             'jarn.mkrelease',
+            'loremipsum',
             'niteoweb.loginas',
             'plone.app.debugtoolbar',
             'plone.reload',
