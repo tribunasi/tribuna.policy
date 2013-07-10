@@ -7,6 +7,8 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     i18n_domain="tribuna.policy">
 
+    <include package="five.grok" />
+
     <!-- Zope2 initialization -->
     <five:registerPackage package="." initialize=".initialize" />
 
