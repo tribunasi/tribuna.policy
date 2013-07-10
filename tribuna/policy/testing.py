@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 # -*- coding: utf-8 -*-
 """Base module for unittesting."""
 
@@ -13,6 +16,15 @@ from plone.app.testing import TEST_USER_NAME
 from plone.testing import z2
 
 import unittest2 as unittest
+
+
+class Session(dict):
+    """Dummy session class to use in tests."""
+    def set(self, key, value):
+        self[key] = value
+
+    def getSessionData(self, create=True):
+        return self
 
 
 class TribunaPolicyLayer(PloneSandboxLayer):

@@ -1,4 +1,6 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
+
 """Setup/installation tests for this package."""
 
 from tribuna.policy.testing import IntegrationTestCase
@@ -16,6 +18,22 @@ class TestTag(IntegrationTestCase):
         """Test if we can create Tag objects without error."""
         api.content.create(
             container=self.portal, type='tribuna.content.tag', title="Tag 1")
+
+
+class TestArticle(IntegrationTestCase):
+    """Test the Tag content type."""
+
+    def setUp(self):
+        """Custom shared utility setup for tests."""
+        self.portal = self.layer['portal']
+
+    def test_create_article(self):
+        """Test if we can create Tag objects without error."""
+        api.content.create(
+            container=self.portal,
+            type='tribuna.content.article',
+            title="Article 1"
+        )
 
 
 class TestEntryPage(IntegrationTestCase):
@@ -71,5 +89,3 @@ class TestEntryPage(IntegrationTestCase):
             [('entry-page-2', 'Entry page 2'),
              ('entry-page-3', 'Entry page 3')]
         )
-
-        
