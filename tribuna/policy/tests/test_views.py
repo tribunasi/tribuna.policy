@@ -24,7 +24,9 @@ class TestHomePageView(IntegrationTestCase):
     def test_homepage_view_empty_session(self):
         """Test view with empty session."""
         self.assertEqual(self.view.is_text_view(), True)
-        self.assertEqual(self.view.articles(), [])
+        self.assertEqual(self.view.articles_union(), [])
+        self.assertEqual(self.view.articles_intersection(), [])
+        self.assertEqual(self.view.articles_all(), [])
         self.assertEqual(self.view.only_one_tag(), False)
         # We do not test tag_description, as it only runs when only_one_tag
         # returns True
@@ -40,9 +42,16 @@ class TestHomePageView(IntegrationTestCase):
         self.assertEqual(self.view.is_text_view(), True)
 
         # Testing the articles function
-        articles = ["Article 1", "Article 2", "Article 3"]
-        self.session.set('content_list', articles)
-        self.assertEqual(self.view.articles(), articles)
+        articles_union = ["Article 1", "Article 2", "Article 3"]
+        articles_intersection = ["Article 1i", "Article 2i", "Article 3i"]
+        self.session.set('content_list', {'union': [], 'intersection': []})
+        self.session['content_list']['union'] = articles_union
+        self.session['content_list']['intersection'] = articles_intersection
+        self.assertEqual(self.view.articles_union(), articles_union)
+        self.assertEqual(self.view.articles_intersection(),
+                         articles_intersection)
+        self.assertEqual(self.view.articles_all(),
+                         articles_intersection + articles_union)
 
         # Testing the only_one_tag function
         self.session['portlet_data'] = Session()
@@ -75,13 +84,15 @@ class TestMainPageView(IntegrationTestCase):
 
     def test_mainpage_view_empty_session(self):
         """Test view with empty session."""
-        self.assertEqual(self.view.articles(), [])
+        self.assertEqual(self.view.articles_all(), [])
 
     def test_mainpage_view_populated_session(self):
         """Test view with populated session."""
         articles = ["Article 1", "Article 2", "Article 3"]
-        self.session.set('content_list', articles)
-        self.assertEqual(self.view.articles(), articles)
+        self.session.set('content_list', {'union': [], 'intersection': []})
+        self.session['content_list']['intersection'] = articles[:2]
+        self.session['content_list']['union'] = articles[2:]
+        self.assertEqual(self.view.articles_all(), articles)
 
     def test_update(self):
         """Test the update function."""

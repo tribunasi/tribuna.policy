@@ -27,6 +27,17 @@ class Session(dict):
         return self
 
 
+def session_populate_portlet_data(session):
+    """Function that populates portlet_data in session with default values."""
+
+    session.set('portlet_data', Session())
+    session['portlet_data']['tags'] = []
+    session['portlet_data']['content_filters'] = []
+    session['portlet_data']['all_tags'] = []
+    session['portlet_data']['sort_order'] = 'descending'
+    session['portlet_data']['sort_on'] = 'latest'
+
+
 class TribunaPolicyLayer(PloneSandboxLayer):
 
     defaultBases = (PLONE_FIXTURE,)
