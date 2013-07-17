@@ -122,26 +122,28 @@ class TestSidebar(IntegrationTestCase):
         """Test defaults without a session."""
         from tribuna.content.portlets.sidebar import articles
 
-        # Articles should return the latest 15 articles, sorted descending on
-        # Date
+        # Since no tags are highlighted, it should return an empty list
         article_titles = []
-        for i in range(4, -1, -1):
-            article_titles.append(
-                u"Article {0} {1} {2} {3}".format(i+1, i+2, i+3, i+4)
-            )
-        for i in range(4, -1, -1):
-            article_titles.append(
-                u"Article {0} {1} {2}".format(i+1, i+2, i+3)
-            )
-        for i in range(4, -1, -1):
-            article_titles.append(
-                u"Article {0} {1}".format(i+1, i+2)
-            )
         articles(self.session)
         self.assertEquals(
             [i.title for i in self.session['content_list']['intersection']],
             article_titles
         )
+
+        # Add some highlighted tags and test again
+
+        # for i in range(4, -1, -1):
+        #     article_titles.append(
+        #         u"Article {0} {1} {2} {3}".format(i+1, i+2, i+3, i+4)
+        #     )
+        # for i in range(4, -1, -1):
+        #     article_titles.append(
+        #         u"Article {0} {1} {2}".format(i+1, i+2, i+3)
+        #     )
+        # for i in range(4, -1, -1):
+        #     article_titles.append(
+        #         u"Article {0} {1}".format(i+1, i+2)
+        #     )
 
     def test_one_tag(self):
         """Test with one tag selected."""
