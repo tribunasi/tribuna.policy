@@ -1,4 +1,6 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
+
 """Installer for the tribuna.policy package."""
 
 from setuptools import find_packages
@@ -39,6 +41,7 @@ setup(
         'eea.tags',
         'five.grok',
         'five.pt',
+        'mobile.sniffer',
         'Pillow',
         'Plone',
         'plone.api',
@@ -58,13 +61,16 @@ setup(
         'develop': [
             'coverage',
             'flake8',
+            'i18ndude',
             'jarn.mkrelease',
             'loremipsum',
             'niteoweb.loginas',
             'plone.app.debugtoolbar',
             'plone.reload',
+            'plone.reload',
             'Products.Clouseau',
             'Products.DocFinderTab',
+            'Products.PDBDebugMode',
             'Products.PDBDebugMode',
             'Products.PrintingMailHost',
             'Sphinx',

@@ -30,4 +30,13 @@
         provides="Products.GenericSetup.interfaces.EXTENSION"
         />
 
+
+    <!-- Register the import step -->
+    <genericsetup:importStep
+        name="tribuna.policy"
+        title="tribuna.policy special import handlers"
+        description=""
+        handler="tribuna.policy.setuphandlers.setupVarious"
+        />
+
 </configure>

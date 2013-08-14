@@ -15,8 +15,10 @@ class TestHomePageView(IntegrationTestCase):
         """Custom shared utility setup for tests."""
         self.portal = self.layer['portal']
         self.session = self.portal.session_data_manager = Session()
+        api.user.create(username="tags_user", roles=("Member", ), email="tags_user@tags.com")
+        api.user.grant_roles(username="tags_user", roles=["Site Administrator", "Member", "Manager", "Editor", "Reader", "Contributor", "Reviewer"])
         self.view = api.content.get_view(
-            name="home-page",
+            name="home",
             context=self.portal,
             request=self.layer['request']
         )
@@ -24,9 +26,10 @@ class TestHomePageView(IntegrationTestCase):
     def test_homepage_view_empty_session(self):
         """Test view with empty session."""
         self.assertEqual(self.view.is_text_view(), True)
-        self.assertEqual(self.view.articles_union(), [])
-        self.assertEqual(self.view.articles_intersection(), [])
-        self.assertEqual(self.view.articles_all(), [])
+        articles = self.view._get_articles()
+        self.assertEqual(articles['union'], [])
+        self.assertEqual(articles['intersection'], [])
+        self.assertEqual(articles['all'], [])
         self.assertEqual(self.view.only_one_tag(), False)
         # We do not test tag_description, as it only runs when only_one_tag
         # returns True
@@ -42,15 +45,27 @@ class TestHomePageView(IntegrationTestCase):
         self.assertEqual(self.view.is_text_view(), True)
 
         # Testing the articles function
+        #
+        #
+        #
+        #
+        # Need to rewrite this, the way we get the content has changed
+        # (no more content_list in session etc.)
+        #
+        #
+        #
         articles_union = ["Article 1", "Article 2", "Article 3"]
         articles_intersection = ["Article 1i", "Article 2i", "Article 3i"]
         self.session.set('content_list', {'union': [], 'intersection': []})
         self.session['content_list']['union'] = articles_union
         self.session['content_list']['intersection'] = articles_intersection
-        self.assertEqual(self.view.articles_union(), articles_union)
-        self.assertEqual(self.view.articles_intersection(),
+
+        articles = self.view._get_articles()
+        import pdb; pdb.set_trace()
+        self.assertEqual(articles['union'], articles_union)
+        self.assertEqual(articles['intersection'],
                          articles_intersection)
-        self.assertEqual(self.view.articles_all(),
+        self.assertEqual(articles['all'],
                          articles_intersection + articles_union)
 
         # Testing the only_one_tag function
@@ -77,7 +92,7 @@ class TestMainPageView(IntegrationTestCase):
         self.portal = self.layer['portal']
         self.session = self.portal.session_data_manager = Session()
         self.view = api.content.get_view(
-            name="main-page",
+            name="articles",
             context=self.portal,
             request=self.layer['request']
         )
