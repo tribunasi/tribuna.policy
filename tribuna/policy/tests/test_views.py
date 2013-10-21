@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 """View tests for this package."""
 
 from tribuna.policy.testing import IntegrationTestCase
@@ -61,7 +58,6 @@ class TestHomePageView(IntegrationTestCase):
         self.session['content_list']['intersection'] = articles_intersection
 
         articles = self.view._get_articles()
-        import pdb; pdb.set_trace()
         self.assertEqual(articles['union'], articles_union)
         self.assertEqual(articles['intersection'],
                          articles_intersection)
