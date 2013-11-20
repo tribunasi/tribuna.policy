@@ -3,6 +3,8 @@
   <version>1</version>
     <dependencies>
     <dependency>profile-tribuna.content:default</dependency>
+    <dependency>profile-tribuna.diazotheme:default</dependency>
+    <dependency>profile-tribuna.annotator:default</dependency>
     <dependency>profile-eea.tags:default</dependency>
     <dependency>profile-collective.z3cform.widgets:default</dependency>
   </dependencies>

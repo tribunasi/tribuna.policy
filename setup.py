@@ -48,6 +48,7 @@ setup(
         'plone.app.jquerytools',
         'plone.formwidget.captcha',
         'setuptools',
+        'tribuna.annotator',
         'tribuna.content',
         'tribuna.diazotheme',
         'z3c.jbot'
