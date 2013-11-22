@@ -38,7 +38,6 @@ setup(
     zip_safe=False,
     install_requires=[
         'collective.z3cform.widgets',
-        'eea.tags',
         'five.grok',
         'five.pt',
         'mobile.sniffer',

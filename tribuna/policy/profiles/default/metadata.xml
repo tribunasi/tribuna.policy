@@ -6,6 +6,5 @@
     <dependency>profile-tribuna.content:default</dependency>
     <dependency>profile-tribuna.diazotheme:default</dependency>
     <dependency>profile-tribuna.annotator:default</dependency>
-    <!--dependency>profile-eea.tags:default</dependency-->
   </dependencies>
 </metadata>
