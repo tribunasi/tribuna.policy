@@ -4,6 +4,7 @@
 # -*- coding: utf-8 -*-
 """Base module for unittesting."""
 
+from plone import api
 from plone.app.testing import applyProfile
 from plone.app.testing import FunctionalTesting
 from plone.app.testing import IntegrationTesting
@@ -51,6 +52,11 @@ class TribunaPolicyLayer(PloneSandboxLayer):
 
     def setUpPloneSite(self, portal):
         """Set up Plone."""
+
+        # set up default workflow
+        wft = api.portal.get_tool('portal_workflow')
+        wft.setDefaultChain('simple_publication_workflow')
+
         # Install into Plone site using portal_setup
         applyProfile(portal, 'tribuna.policy:default')
 

@@ -28,3 +28,11 @@ class TestInstall(IntegrationTestCase):
         from tribuna.policy.interfaces import ITribunaPolicyLayer
         from plone.browserlayer import utils
         self.failUnless(ITribunaPolicyLayer in utils.registered_layers())
+
+    def test_initial_content(self):
+        """Test if the initial content hierachy was installed properly"""
+        assert 'tags-folder' in self.portal.keys()
+        assert 'articles-folder' in self.portal.keys()
+        assert 'images-folder' in self.portal.keys()
+        assert 'entry-pages' in self.portal.keys()
+        assert 'files-folder' in self.portal.keys()

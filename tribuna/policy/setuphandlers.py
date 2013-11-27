@@ -41,7 +41,10 @@ def create_structure(portal):
 
     # delete default Plone content
     for item_id in ('Members', 'news', 'events', 'front-page'):
-        api.content.delete(portal[item_id])
+        try:
+            api.content.delete(portal[item_id])
+        except KeyError:
+            pass
 
     # create root folders
     for item in INITIAL_STRUCTURE:

@@ -15,4 +15,8 @@ INITIAL_STRUCTURE = [
         'title': 'Entry pages',
         'type': 'Folder'
     },
+    {
+        'title': 'Files folder',
+        'type': 'Folder'
+    },
 ]
