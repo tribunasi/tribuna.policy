@@ -38,4 +38,12 @@
         handler="tribuna.policy.setuphandlers.setup_various"
         />
 
+    <genericsetup:upgradeStep
+        title="Fix annotation ids"
+        description="Set annotation UID as the id for all annotations (we need to have globally unique annotation ids for the @@articles view)"
+        source="1"
+        destination="2"
+        handler=".upgrades.fix_annotation_ids"
+        profile="tribuna.policy:default" />
+
 </configure>
