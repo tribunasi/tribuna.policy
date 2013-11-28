@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<object name="portal_css" meta_type="Stylesheets Registry">
+ <stylesheet title="jQuery CSS" applyPrefix="False" authenticated="False"
+    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="on" expression="" id="++resource++jquery.css"
+    media="all" rel="stylesheet" rendering="import"/>
+ <stylesheet title="jQuery plugin: Tokeninput Mac" applyPrefix="False"
+    authenticated="False" bundle="default" cacheable="True" compression="safe"
+    conditionalcomment="" cookable="True" enabled="on" expression=""
+    id="++resource++jquery.tokeninput.mac.css" media="all" rel="stylesheet"
+    rendering="import"/>
+ <stylesheet title="jQuery plugin: Tokeninput Facebook" applyPrefix="False"
+    authenticated="False" bundle="default" cacheable="True" compression="safe"
+    conditionalcomment="" cookable="True" enabled="on" expression=""
+    id="++resource++jquery.tokeninput.facebook.css" media="all"
+    rel="stylesheet" rendering="import"/>
+ <stylesheet title="jQuery plugin: Tokeninput" applyPrefix="False"
+    authenticated="False" bundle="default" cacheable="True" compression="safe"
+    conditionalcomment="" cookable="True" enabled="on" expression=""
+    id="++resource++jquery.tokeninput.css" media="all" rel="stylesheet"
+    rendering="import"/>
+ <stylesheet title="" applyPrefix="False" authenticated="False"
+    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="on" expression="" id="reset.css" media="screen"
+    rel="stylesheet" rendering="link"/>
+ <stylesheet title="" applyPrefix="False" authenticated="True"
+    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="on" expression="" id="member.css" media="screen"
+    rel="stylesheet" rendering="link"/>
+ <stylesheet title="" applyPrefix="False" authenticated="False"
+    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="on" expression="" id="base.css" media="screen"
+    rel="stylesheet" rendering="link"/>
+ <stylesheet title="" applyPrefix="False" authenticated="False"
+    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="on"
+    expression="python: (not request.get('HTTP_X_THEME_ENABLED', None)) or '@@theming-controlpanel' in request.getURL()"
+    id="public.css" media="screen" rel="stylesheet" rendering="link"/>
+ <stylesheet title="" applyPrefix="False" authenticated="False"
+    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="on" expression=""
+    id="collective.js.jqueryui.custom.min.css" media="screen" rel="stylesheet"
+    rendering="link"/>
+ <stylesheet title="" applyPrefix="False" authenticated="False"
+    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="on" expression="" id="columns.css" media="screen"
+    rel="stylesheet" rendering="link"/>
+ <stylesheet title="" applyPrefix="False" authenticated="False"
+    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="on" expression="" id="authoring.css"
+    media="screen" rel="stylesheet" rendering="link"/>
+ <stylesheet title="" applyPrefix="False" authenticated="False"
+    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="on" expression="" id="portlets.css"
+    media="screen" rel="stylesheet" rendering="link"/>
+ <stylesheet title="" applyPrefix="False" authenticated="False"
+    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="on" expression="" id="controlpanel.css"
+    media="screen" rel="stylesheet" rendering="link"/>
+ <stylesheet title="" applyPrefix="False" authenticated="False"
+    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="on" expression="" id="deprecated.css"
+    media="screen" rel="stylesheet" rendering="link"/>
+ <stylesheet title="" applyPrefix="False" authenticated="False"
+    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="on" expression="" id="navtree.css" media="screen"
+    rel="stylesheet" rendering="link"/>
+ <stylesheet title="" applyPrefix="False" authenticated="False"
+    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="on" expression="" id="invisibles.css"
+    media="screen" rel="stylesheet" rendering="link"/>
+ <stylesheet title="" applyPrefix="False" authenticated="False"
+    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="on" expression="" id="forms.css" media="screen"
+    rel="stylesheet" rendering="link"/>
+ <stylesheet title="" applyPrefix="False" authenticated="False"
+    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="on" expression=""
+    id="++resource++plone.app.discussion.stylesheets/discussion.css"
+    media="screen" rel="stylesheet" rendering="link"/>
+ <stylesheet title="" applyPrefix="False" authenticated="False"
+    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="on" expression="" id="bbb-kss.css" media="screen"
+    rel="stylesheet" rendering="link"/>
+ <stylesheet title="" applyPrefix="False" authenticated="False"
+    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="on" expression=""
+    id="++resource++tinymce.stylesheets/tinymce.css" media="screen"
+    rel="stylesheet" rendering="link"/>
+ <stylesheet title="" applyPrefix="False" authenticated="False"
+    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="on" expression="" id="print.css" media="print"
+    rel="stylesheet" rendering="link"/>
+ <stylesheet title="" applyPrefix="False" authenticated="False"
+    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="on" expression="" id="mobile.css"
+    media="handheld, screen and (max-device-width: 480px)" rel="stylesheet"
+    rendering="link"/>
+ <stylesheet title="" applyPrefix="False" authenticated="False"
+    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="on"
+    expression="python:portal.restrictedTraverse('@@plone_portal_state').is_rtl()"
+    id="RTL.css" media="screen" rel="stylesheet" rendering="link"/>
+ <stylesheet title="" applyPrefix="False" authenticated="False"
+    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="False" expression=""
+    id="++resource++plone.app.jquerytools.overlays.css" media="screen"
+    rel="stylesheet" rendering="link"/>
+ <stylesheet title="" applyPrefix="False" authenticated="False"
+    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="on" expression=""
+    id="++resource++plone.app.jquerytools.dateinput.css" media="screen"
+    rel="stylesheet" rendering="link"/>
+ <stylesheet title="" applyPrefix="False" authenticated="False"
+    bundle="default" cacheable="True" compression="safe"
+    conditionalcomment="lt IE 8" cookable="True" enabled="on" expression=""
+    id="IEFixes.css" media="screen" rel="stylesheet" rendering="link"/>
+ <stylesheet title="" applyPrefix="False" authenticated="False"
+    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="on" expression=""
+    id="++resource++plone.formwidget.autocomplete/jquery.autocomplete.css"
+    media="screen" rel="stylesheet" rendering="import"/>
+ <stylesheet title="" applyPrefix="False" authenticated="True"
+    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="on" expression=""
+    id="++resource++collective.z3cform.widgets/related.css" media="screen"
+    rel="stylesheet" rendering="import"/>
+ <stylesheet title="" applyPrefix="False" authenticated="True"
+    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="on" expression=""
+    id="++resource++collective.z3cform.widgets/token-input-facebook.css"
+    media="screen" rel="stylesheet" rendering="import"/>
+ <stylesheet title="" applyPrefix="False" authenticated="True"
+    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="on" expression=""
+    id="++resource++collective.z3cform.widgets/rte.css" media="screen"
+    rel="stylesheet" rendering="import"/>
+ <stylesheet title="" applyPrefix="False" authenticated="False"
+    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="on" expression=""
+    id="++resource++redomino.advancedkeyword.resources/jquery.keywordtree.css"
+    media="all" rel="stylesheet" rendering="import"/>
+ <stylesheet title="" applyPrefix="False" authenticated="False"
+    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="on" expression=""
+    id="++resource++tribuna.annotator/annotator.css" media="screen"
+    rel="stylesheet" rendering="import"/>
+ <stylesheet title="" applyPrefix="False" authenticated="True"
+    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="on" expression=""
+    id="++theme++tribuna.diazotheme/css/tribuna-admin.css" media="screen"
+    rel="stylesheet" rendering="import"/>
+ <stylesheet title="" applyPrefix="False" authenticated="False"
+    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="on" expression="" id="ploneCustom.css"
+    media="all" rel="stylesheet" rendering="link"/>
+</object>
