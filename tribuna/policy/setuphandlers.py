@@ -53,6 +53,9 @@ def create_structure(portal):
             type=item['type'],
             title=item['title'],
         )
+        # XXX: This is probably a bug in plone.api, the title is not set
+        # correctly, we need to set it again (id is created correctly tho)
+        obj.title = item['title']
         api.content.transition(obj, transition='publish')
 
     # create an entry page and set it as default view

@@ -1,22 +1,22 @@
 INITIAL_STRUCTURE = [
     {
-        'title': 'Tags folder',
+        'title': u'Tags folder',
         'type': 'Folder'
     },
     {
-        'title': 'Articles folder',
+        'title': u'Articles folder',
         'type': 'Folder'
     },
     {
-        'title': 'Images folder',
+        'title': u'Images folder',
         'type': 'Folder'
     },
     {
-        'title': 'Entry pages',
+        'title': u'Entry pages',
         'type': 'Folder'
     },
     {
-        'title': 'Files folder',
+        'title': u'Files folder',
         'type': 'Folder'
     },
 ]
