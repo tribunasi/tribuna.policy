@@ -3,6 +3,7 @@
   <version>1</version>
     <dependencies>
     <dependency>profile-collective.z3cform.widgets:default</dependency>
+    <dependency>profile-eea.jquery:16-tokeninput</dependency>
     <dependency>profile-tribuna.content:default</dependency>
     <dependency>profile-tribuna.diazotheme:default</dependency>
     <dependency>profile-tribuna.annotator:default</dependency>
