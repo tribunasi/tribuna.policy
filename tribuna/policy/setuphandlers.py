@@ -66,7 +66,7 @@ def create_structure(portal):
         text=u'Hello'
     )
     api.content.transition(entry_page, transition='publish')
-    portal['entry-pages'].default_page = entry_page.id
+    portal['entry-pages'].setDefaultPage(entry_page.id)
 
     # set default view also on root
     portal.default_page = 'entry-pages'
