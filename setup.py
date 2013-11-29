@@ -50,6 +50,7 @@ setup(
         'tribuna.annotator',
         'tribuna.content',
         'tribuna.diazotheme',
+        'collective.cookiecuttr',
         'z3c.jbot'
     ],
     extras_require={
