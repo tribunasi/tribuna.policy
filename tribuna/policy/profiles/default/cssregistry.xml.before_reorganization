@@ -1,8 +1,31 @@
 <?xml version="1.0"?>
 <object name="portal_css" meta_type="Stylesheets Registry">
+ <stylesheet title="jQuery CSS" applyPrefix="False" authenticated="False"
+    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="on" expression="" id="++resource++jquery.css"
+    media="all" rel="stylesheet" rendering="import"/>
+ <stylesheet title="jQuery plugin: Tokeninput Mac" applyPrefix="False"
+    authenticated="False" bundle="default" cacheable="True" compression="safe"
+    conditionalcomment="" cookable="True" enabled="on" expression=""
+    id="++resource++jquery.tokeninput.mac.css" media="all" rel="stylesheet"
+    rendering="import"/>
+ <stylesheet title="jQuery plugin: Tokeninput Facebook" applyPrefix="False"
+    authenticated="False" bundle="default" cacheable="True" compression="safe"
+    conditionalcomment="" cookable="True" enabled="on" expression=""
+    id="++resource++jquery.tokeninput.facebook.css" media="all"
+    rel="stylesheet" rendering="import"/>
+ <stylesheet title="jQuery plugin: Tokeninput" applyPrefix="False"
+    authenticated="False" bundle="default" cacheable="True" compression="safe"
+    conditionalcomment="" cookable="True" enabled="on" expression=""
+    id="++resource++jquery.tokeninput.css" media="all" rel="stylesheet"
+    rendering="import"/>
  <stylesheet title="" applyPrefix="False" authenticated="False"
     bundle="default" cacheable="True" compression="safe" conditionalcomment=""
     cookable="True" enabled="on" expression="" id="reset.css" media="screen"
+    rel="stylesheet" rendering="link"/>
+ <stylesheet title="" applyPrefix="False" authenticated="True"
+    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="on" expression="" id="member.css" media="screen"
     rel="stylesheet" rendering="link"/>
  <stylesheet title="" applyPrefix="False" authenticated="False"
     bundle="default" cacheable="True" compression="safe" conditionalcomment=""
@@ -57,6 +80,10 @@
     media="screen" rel="stylesheet" rendering="link"/>
  <stylesheet title="" applyPrefix="False" authenticated="False"
     bundle="default" cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="on" expression="" id="bbb-kss.css" media="screen"
+    rel="stylesheet" rendering="link"/>
+ <stylesheet title="" applyPrefix="False" authenticated="False"
+    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
     cookable="True" enabled="on" expression=""
     id="++resource++tinymce.stylesheets/tinymce.css" media="screen"
     rel="stylesheet" rendering="link"/>
@@ -71,46 +98,7 @@
     rendering="link"/>
  <stylesheet title="" applyPrefix="False" authenticated="False"
     bundle="default" cacheable="True" compression="safe" conditionalcomment=""
-    cookable="True" enabled="on" expression=""
-    id="++resource++plone.app.jquerytools.dateinput.css" media="screen"
-    rel="stylesheet" rendering="link"/>
- <stylesheet title="" applyPrefix="False" authenticated="False"
-    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
-    cookable="True" enabled="on" expression=""
-    id="++resource++redomino.advancedkeyword.resources/jquery.keywordtree.css"
-    media="all" rel="stylesheet" rendering="link"/>
- <stylesheet title="" applyPrefix="False" authenticated="False"
-    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
-    cookable="True" enabled="on" expression=""
-    id="++resource++tribuna.annotator/annotator.css" media="screen"
-    rel="stylesheet" rendering="link"/>
- <stylesheet title="" applyPrefix="False" authenticated="False"
-    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
-    cookable="True" enabled="on" expression=""
-    id="++resource++plone.formwidget.autocomplete/jquery.autocomplete.css"
-    media="screen" rel="stylesheet" rendering="link"/>
- <stylesheet title="" applyPrefix="False" authenticated="False"
-    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
-    cookable="True" enabled="on" expression="" id="++resource++jquery.css"
-    media="all" rel="stylesheet" rendering="link"/>
- <stylesheet title="" applyPrefix="False" authenticated="False"
-    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
-    cookable="True" enabled="on" expression=""
-    id="++resource++jquery.tokeninput.facebook.css" media="all"
-    rel="stylesheet" rendering="link"/>
- <stylesheet title="" applyPrefix="False" authenticated="False"
-    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
-    cookable="True" enabled="on" expression=""
-    id="++resource++jquery.tokeninput.css" media="all" rel="stylesheet"
-    rendering="link"/>
- <stylesheet title="" applyPrefix="False" authenticated="False"
-    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
-    cookable="True" enabled="on" expression=""
-    id="++resource++jquery.tokeninput.mac.css" media="all" rel="stylesheet"
-    rendering="link"/>
- <stylesheet title="" applyPrefix="False" authenticated="False"
-    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
-    cookable="True" enabled="False"
+    cookable="True" enabled="on"
     expression="python:portal.restrictedTraverse('@@plone_portal_state').is_rtl()"
     id="RTL.css" media="screen" rel="stylesheet" rendering="link"/>
  <stylesheet title="" applyPrefix="False" authenticated="False"
@@ -119,85 +107,111 @@
     id="++resource++plone.app.jquerytools.overlays.css" media="screen"
     rel="stylesheet" rendering="link"/>
  <stylesheet title="" applyPrefix="False" authenticated="False"
+    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="on" expression=""
+    id="++resource++plone.app.jquerytools.dateinput.css" media="screen"
+    rel="stylesheet" rendering="link"/>
+ <stylesheet title="" applyPrefix="False" authenticated="False"
     bundle="default" cacheable="True" compression="safe"
     conditionalcomment="lt IE 8" cookable="True" enabled="on" expression=""
     id="IEFixes.css" media="screen" rel="stylesheet" rendering="link"/>
- <stylesheet title="" applyPrefix="False" authenticated="True"
+ <stylesheet title="" applyPrefix="False" authenticated="False"
     bundle="default" cacheable="True" compression="safe" conditionalcomment=""
-    cookable="True" enabled="on" expression="" id="member.css" media="screen"
-    rel="stylesheet" rendering="link"/>
+    cookable="True" enabled="on" expression=""
+    id="++resource++plone.formwidget.autocomplete/jquery.autocomplete.css"
+    media="screen" rel="stylesheet" rendering="import"/>
  <stylesheet title="" applyPrefix="False" authenticated="True"
     bundle="default" cacheable="True" compression="safe" conditionalcomment=""
     cookable="True" enabled="on" expression=""
     id="++resource++collective.z3cform.widgets/related.css" media="screen"
-    rel="stylesheet" rendering="link"/>
+    rel="stylesheet" rendering="import"/>
  <stylesheet title="" applyPrefix="False" authenticated="True"
     bundle="default" cacheable="True" compression="safe" conditionalcomment=""
     cookable="True" enabled="on" expression=""
     id="++resource++collective.z3cform.widgets/token-input-facebook.css"
-    media="screen" rel="stylesheet" rendering="link"/>
+    media="screen" rel="stylesheet" rendering="import"/>
  <stylesheet title="" applyPrefix="False" authenticated="True"
     bundle="default" cacheable="True" compression="safe" conditionalcomment=""
     cookable="True" enabled="on" expression=""
     id="++resource++collective.z3cform.widgets/rte.css" media="screen"
-    rel="stylesheet" rendering="link"/>
- <stylesheet title="" applyPrefix="True" authenticated="True" bundle="default"
-    cacheable="True" compression="safe" conditionalcomment="" cookable="True"
-    enabled="on" expression="request/HTTP_X_THEME_ENABLED | nothing"
-    id="++theme++tribuna.diazotheme/css/tribuna-admin.css" media=""
-    rel="stylesheet" rendering="link"/>
- <stylesheet title="" applyPrefix="True" authenticated="False"
+    rel="stylesheet" rendering="import"/>
+ <stylesheet title="" applyPrefix="False" authenticated="False"
     bundle="default" cacheable="True" compression="safe" conditionalcomment=""
-    cookable="True" enabled="on"
+    cookable="True" enabled="on" expression=""
+    id="++resource++redomino.advancedkeyword.resources/jquery.keywordtree.css"
+    media="all" rel="stylesheet" rendering="import"/>
+ <stylesheet title="" applyPrefix="False" authenticated="False"
+    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="on" expression=""
+    id="++resource++tribuna.annotator/annotator.css" media="screen"
+    rel="stylesheet" rendering="import"/>
+
+ <!-- DIAZOTHEME -->
+ <stylesheet title="" authenticated="False" cacheable="True"
+    compression="safe" conditionalcomment="" cookable="True" enabled="on"
     expression="request/HTTP_X_THEME_ENABLED | nothing"
-    id="++theme++tribuna.diazotheme/css/public.css" media="" rel="stylesheet"
-    rendering="link"/>
- <stylesheet title="" applyPrefix="True" authenticated="False"
-    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
-    cookable="True" enabled="on"
+    id="++theme++tribuna.diazotheme/css/public.css" media=""
+    rel="stylesheet" rendering="link" applyPrefix="True"
+    />
+ <stylesheet title="" authenticated="False" cacheable="True"
+    compression="safe" conditionalcomment="" cookable="True" enabled="on"
     expression="request/HTTP_X_THEME_ENABLED | nothing"
-    id="++theme++tribuna.diazotheme/css/reset.css" media="" rel="stylesheet"
-    rendering="link"/>
- <stylesheet title="" applyPrefix="True" authenticated="False"
-    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
-    cookable="True" enabled="on"
+    id="++theme++tribuna.diazotheme/css/reset.css" media=""
+    rel="stylesheet" rendering="link" applyPrefix="True"
+    />
+ <stylesheet title="" authenticated="False" cacheable="True"
+    compression="safe" conditionalcomment="" cookable="True" enabled="on"
     expression="request/HTTP_X_THEME_ENABLED | nothing"
     id="++theme++tribuna.diazotheme/bootstrap/css/bootstrap.min.css" media=""
-    rel="stylesheet" rendering="link"/>
- <stylesheet title="" applyPrefix="True" authenticated="False"
-    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
-    cookable="True" enabled="on"
+    rel="stylesheet" rendering="link" applyPrefix="True"
+    />
+ <stylesheet title="" authenticated="False" cacheable="True"
+    compression="safe" conditionalcomment="" cookable="True" enabled="on"
     expression="request/HTTP_X_THEME_ENABLED | nothing"
     id="++theme++tribuna.diazotheme/bootstrap/css/bootstrap-responsive.min.css"
-    media="" rel="stylesheet" rendering="link"/>
- <stylesheet title="" applyPrefix="True" authenticated="False"
-    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
-    cookable="True" enabled="on"
+    media="" rel="stylesheet" rendering="link" applyPrefix="True"
+    />
+ <stylesheet title="" authenticated="False" cacheable="True"
+    compression="safe" conditionalcomment="" cookable="True" enabled="on"
     expression="request/HTTP_X_THEME_ENABLED | nothing"
-    id="++theme++tribuna.diazotheme/openid-selector/css/openid.css" media=""
-    rel="stylesheet" rendering="link"/>
- <stylesheet title="" applyPrefix="True" authenticated="False"
-    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
-    cookable="True" enabled="on"
+    id="++theme++tribuna.diazotheme/openid-selector/css/openid.css"
+    media="" rel="stylesheet" rendering="link" applyPrefix="True"
+    />
+ <stylesheet title="" authenticated="False" cacheable="True"
+    compression="safe" conditionalcomment="" cookable="True" enabled="on"
     expression="request/HTTP_X_THEME_ENABLED | nothing"
-    id="++theme++tribuna.diazotheme/css/theme.css" media="" rel="stylesheet"
-    rendering="link"/>
- <stylesheet title="" applyPrefix="True" authenticated="False"
-    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
-    cookable="True" enabled="on"
+    id="++theme++tribuna.diazotheme/css/theme.css"
+    media="" rel="stylesheet" rendering="link" applyPrefix="True"
+    />
+ <stylesheet title="" authenticated="False" cacheable="True"
+    compression="safe" conditionalcomment="" cookable="True" enabled="on"
     expression="request/HTTP_X_THEME_ENABLED | nothing"
     id="++theme++tribuna.diazotheme/css/jquery-ui-1.10.3.custom.min.css"
-    media="" rel="stylesheet" rendering="link"/>
- <stylesheet title="" applyPrefix="True" authenticated="False"
-    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
-    cookable="True" enabled="on"
+    media="" rel="stylesheet" rendering="link" applyPrefix="True"
+    />
+ <stylesheet title="" authenticated="False" cacheable="True"
+    compression="safe" conditionalcomment="" cookable="True" enabled="on"
     expression="request/HTTP_X_THEME_ENABLED | nothing"
-    id="++theme++tribuna.diazotheme/css/style.css" media="" rel="stylesheet"
-    rendering="link"/>
- <stylesheet title="" applyPrefix="True" authenticated="False"
-    bundle="default" cacheable="True" compression="safe" conditionalcomment=""
-    cookable="True" enabled="on"
+    id="++theme++tribuna.diazotheme/css/jquery-ui-1.10.3.custom.min.css"
+    media="" rel="stylesheet" rendering="link" applyPrefix="True"
+    />
+ <stylesheet title="" authenticated="False" cacheable="True"
+    compression="safe" conditionalcomment="" cookable="True" enabled="on"
     expression="request/HTTP_X_THEME_ENABLED | nothing"
-    id="++theme++tribuna.diazotheme/css/tribuna.css" media="" rel="stylesheet"
-    rendering="link"/>
+    id="++theme++tribuna.diazotheme/css/style.css"
+    media="" rel="stylesheet" rendering="link" applyPrefix="True"
+    />
+ <stylesheet title="" authenticated="False" cacheable="True"
+    compression="safe" conditionalcomment="" cookable="True" enabled="on"
+    expression="request/HTTP_X_THEME_ENABLED | nothing"
+    id="++theme++tribuna.diazotheme/css/tribuna.css" media=""
+    rel="stylesheet" rendering="link" applyPrefix="True"
+    />
+ <stylesheet title="" authenticated="True" cacheable="True"
+    compression="safe" conditionalcomment="" cookable="True" enabled="on"
+    expression="request/HTTP_X_THEME_ENABLED | nothing"
+    id="++theme++tribuna.diazotheme/css/tribuna-admin.css" media=""
+    rel="stylesheet" rendering="link" applyPrefix="True"
+    />
+
 </object>
