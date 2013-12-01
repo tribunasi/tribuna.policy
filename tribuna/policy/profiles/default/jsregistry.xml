@@ -136,9 +136,6 @@
     expression="" id="tiny_mce_gzip.js" inline="False"/>
  <javascript authenticated="False" bundle="default" cacheable="True"
     compression="safe" conditionalcomment="" cookable="True" enabled="True"
-    expression="" id="++resource++jquery.tokeninput.js" inline="False"/>
- <javascript authenticated="False" bundle="default" cacheable="True"
-    compression="safe" conditionalcomment="" cookable="True" enabled="True"
     expression="" id="collective.js.jqueryui.custom.min.js" inline="False"/>
  <javascript authenticated="False" bundle="default" cacheable="True"
     compression="none" conditionalcomment="" cookable="True" enabled="True"
@@ -178,6 +175,9 @@
     inline="False"/>
  <javascript authenticated="False" bundle="default" cacheable="True"
     compression="safe" conditionalcomment="" cookable="True" enabled="True"
+    expression="" id="++resource++jquery.tokeninput.js" inline="False"/>
+ <javascript authenticated="False" bundle="default" cacheable="True"
+    compression="safe" conditionalcomment="" cookable="True" enabled="True"
     expression=""
     id="++resource++redomino.advancedkeyword.resources/jquery.keywordtree.js"
     inline="False"/>
@@ -187,12 +187,12 @@
     id="++resource++redomino.advancedkeyword.resources/jquery.shiftcheckbox.js"
     inline="False"/>
  <javascript authenticated="False" bundle="default" cacheable="True"
+    compression="none" conditionalcomment="" cookable="True" enabled="True"
+    expression="" id="++resource++tribuna.annotator/annotator-full.js"
+    inline="False"/>
+ <javascript authenticated="False" bundle="default" cacheable="True"
     compression="safe" conditionalcomment="" cookable="True" enabled="True"
     expression="python:here.restrictedTraverse('@@plone_context_info').view_url() == 'edit'"
     id="++resource++redomino.advancedkeyword.resources/subjectkeywordtree.js"
-    inline="False"/>
- <javascript authenticated="False" bundle="default" cacheable="True"
-    compression="none" conditionalcomment="" cookable="True" enabled="True"
-    expression="" id="++resource++tribuna.annotator/annotator-full.js"
     inline="False"/>
 </object>
