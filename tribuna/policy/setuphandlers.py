@@ -5,6 +5,8 @@ from plone.portlets.constants import CONTEXT_CATEGORY
 from plone.portlets.interfaces import ILocalPortletAssignmentManager
 from plone.portlets.interfaces import IPortletManager
 from plone.portlets.interfaces import IPortletAssignmentMapping
+from Products.ResourceRegistries.exportimport.resourceregistry import \
+    importResRegistry
 from tribuna.content.portlets.sidebar import Assignment
 from tribuna.policy.config import INITIAL_STRUCTURE
 from zope.component import getUtility
@@ -96,13 +98,45 @@ def add_sidebar_portlet(portal):
 
 
 def setup_various(context):
-    # We check from our GenericSetup context whether we are running
-    # add-on installation for your product or any other proudct
     if context.readDataFile('tribuna.policy.setup_various.txt') is None:
-        # Not your add-on
+    # Not our add-on
         return
-
     portal = api.portal.get()
     create_tags_user(portal)
     create_structure(portal)
     add_sidebar_portlet(portal)
+
+
+def reset_css_registry(context):
+    """Remove all resources from the CSS registry and add them from
+    cssregistry.xml.
+    """
+    if context.readDataFile('tribuna.policy.setup_various.txt') is None:
+    # Not our add-on
+        return
+    portal_css = api.portal.get_tool('portal_css')
+    portal_css.clearResources()
+
+    return importResRegistry(
+        context,
+        'portal_css',
+        'Tribuna CSS registry',
+        'cssregistry.xml'
+    )
+
+
+def reset_js_registry(context):
+    """Remove all resources from the JavaScript registry and add them
+    from jsregistry.xml.
+    """
+    if context.readDataFile('tribuna.policy.setup_various.txt') is None:
+    # Not our add-on
+        return
+    portal_js = api.portal.get_tool('portal_javascripts')
+    portal_js.clearResources()
+    return importResRegistry(
+        context,
+        'portal_javascripts',
+        'Tribuna Javascript registry',
+        'jsregistry.xml'
+    )

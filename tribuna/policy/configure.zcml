@@ -30,14 +30,27 @@
         provides="Products.GenericSetup.interfaces.EXTENSION"
         />
 
-    <!-- Register the import step -->
+    <!-- Import steps -->
     <genericsetup:importStep
         name="tribuna.policy: various"
         title="tribuna.policy special import handlers"
         description="Additional installation steps for Tribuna"
         handler="tribuna.policy.setuphandlers.setup_various"
         />
+    <genericsetup:importStep
+        name="tribuna.policy: reset css registry"
+        title="tribuna.policy Reset CSS registry"
+        description="Reset css registry and reimport it from cssregistry.xml"
+        handler="tribuna.policy.setuphandlers.reset_css_registry"
+        />
+    <genericsetup:importStep
+        name="tribuna.policy: reset js registry"
+        title="tribuna.policy Reset JS registry"
+        description="Reset js registry and reimport it from jsregistry.xml"
+        handler="tribuna.policy.setuphandlers.reset_js_registry"
+        />
 
+    <!-- Upgrade steps -->
     <genericsetup:upgradeStep
         title="Fix annotation ids"
         description="Set annotation UID as the id for all annotations (we need to have globally unique annotation ids for the @@articles view)"
