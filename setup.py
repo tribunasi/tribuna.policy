@@ -40,6 +40,8 @@ setup(
         'collective.z3cform.widgets',
         'five.grok',
         'five.pt',
+        # needed if we re-enable populator.py,
+        #'loremipsum',
         'mobile.sniffer',
         'Pillow',
         'Plone',
