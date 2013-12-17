@@ -47,6 +47,7 @@ setup(
         'Plone',
         'plone.api',
         'plone.app.jquerytools',
+        'plone.app.caching',
         'plone.formwidget.captcha',
         'setuptools',
         'tribuna.annotator',
