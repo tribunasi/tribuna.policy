@@ -1,7 +1,5 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# -*- coding: utf-8 -*-
 """Base module for unittesting."""
 
 from plone import api
@@ -18,25 +16,84 @@ from plone.testing import z2
 
 import unittest2 as unittest
 
-
-class Session(dict):
-    """Dummy session class to use in tests."""
-    def set(self, key, value):
-        self[key] = value
-
-    def getSessionData(self, create=True):
-        return self
+from tribuna.content.behaviors.behaviors import ITags
 
 
-def session_populate_portlet_data(session):
-    """Function that populates portlet_data in session with default values."""
+def create_article(container, title, subject=[]):
+    """Creates an article, publishes it, adaps it and runs our 'tags_new'
+    property setter so the needed tags are automatically built etc.
 
-    session.set('portlet_data', Session())
-    session['portlet_data']['tags'] = []
-    session['portlet_data']['content_filters'] = []
-    session['portlet_data']['all_tags'] = []
-    session['portlet_data']['sort_order'] = 'descending'
-    session['portlet_data']['sort_on'] = 'latest'
+    We need this because behaviors don't seem to work automatically in tests,
+    so we need adapt each Article after creation.
+    """
+
+    article = api.content.create(
+        container=container,
+        type='tribuna.content.article',
+        title=title,
+    )
+    api.content.transition(obj=article, transition='publish')
+    adapter = ITags(article)
+    adapter.tags_new = subject
+    article.reindexObject()
+
+    return adapter
+
+
+def populate_dummy(portal):
+    """Populate the portal with some dummy data useful for tests. We need some
+    articles with different tags, some of the tags should be highlighted.
+    """
+
+    article_fld = portal['articles-folder']
+    # Create some articles with combinations of 3 tags
+
+    create_article(
+        container=article_fld,
+        title="Article 1a",
+        subject=['tag1'],
+    )
+    create_article(
+        container=article_fld,
+        title="Article 2a",
+        subject=['tag2'],
+    )
+    create_article(
+        container=article_fld,
+        title="Article1a",
+        subject=['tag3'],
+    )
+    create_article(
+        container=article_fld,
+        title="Article 1b",
+        subject=['tag1'],
+    )
+    create_article(
+        container=article_fld,
+        title="Article 12a",
+        subject=['tag1', 'tag2'],
+    )
+    create_article(
+        container=article_fld,
+        title="Article 123a",
+        subject=['tag1', 'tag2', 'tag3'],
+    )
+
+    create_article(
+        container=article_fld,
+        title="Article H",
+        subject=['htag'],
+    )
+    create_article(
+        container=article_fld,
+        title="Article H2a",
+        subject=['htag', 'tag2'],
+    )
+
+    # htag is highlighted in navigation
+    portal['tags-folder']['htag'].highlight_in_navigation = True
+
+
 
 
 class TribunaPolicyLayer(PloneSandboxLayer):

@@ -1,35 +1,77 @@
+# -*- coding: utf-8 -*-
+
 """View tests for this package."""
 
 from tribuna.policy.testing import IntegrationTestCase
-from tribuna.policy.testing import Session
+from tribuna.policy.testing import create_article
+from tribuna.policy.testing import populate_dummy
+
 from plone import api
 
 
-class TestHomePageView(IntegrationTestCase):
-    """Test the home-page view."""
+class TestHomePageViewEmpty(IntegrationTestCase):
+    """Test empty home view."""
 
     def setUp(self):
         """Custom shared utility setup for tests."""
         self.portal = self.layer['portal']
-        self.session = self.portal.session_data_manager = Session()
-        api.user.create(username="tags_user", roles=("Member", ), email="tags_user@tags.com")
-        api.user.grant_roles(username="tags_user", roles=["Site Administrator", "Member", "Manager", "Editor", "Reader", "Contributor", "Reviewer"])
         self.view = api.content.get_view(
             name="home",
             context=self.portal,
             request=self.layer['request']
         )
 
-    def test_homepage_view_empty_session(self):
-        """Test view with empty session."""
-        self.assertEqual(self.view.is_text_view(), True)
+    def test_home_view_without_get(self):
+        """Test view without GET parameters."""
+        # defaults to drag view
+        self.assertEqual(self.view.is_text_view(), False)
+
+        # check for empty articles
         articles = self.view._get_articles()
         self.assertEqual(articles['union'], [])
         self.assertEqual(articles['intersection'], [])
         self.assertEqual(articles['all'], [])
-        self.assertEqual(self.view.only_one_tag(), False)
-        # We do not test tag_description, as it only runs when only_one_tag
-        # returns True
+
+        self.assertEqual(self.view.show_intersection(), False)
+        self.assertEqual(self.view.show_union(), False)
+
+    def test_home_view_with_get(self):
+        # set GET parameter to text view
+
+        self.view.request.form['view_type'] = 'text'
+        self.assertEqual(self.view.is_text_view(), True)
+
+
+class TestHomePageViewPopulated(IntegrationTestCase):
+    """Test the populated home view."""
+
+    def setUp(self):
+        """Custom shared utility setup for tests."""
+        self.portal = self.layer['portal']
+        populate_dummy(self.portal)
+        self.view = api.content.get_view(
+            name="home",
+            context=self.portal,
+            request=self.layer['request']
+        )
+
+    def test_home_view_without_get(self):
+        """Test view wihout GET parameters, should get articles with
+        highlighted tags."""
+
+        self.assertEqual(self.view.is_text_view(), False)
+
+        articles = self.view._get_articles()
+        import pdb; pdb.set_trace()
+        self.assertEqual(articles['all'], [])
+        self.assertEqual(articles['intersection'], [])
+        self.assertEqual(articles['union'], [])
+
+
+
+
+
+
 
     def test_homepage_view_populated_session(self):
         """Test view with populated session."""

@@ -6,7 +6,6 @@ from datetime import datetime
 from plone import api
 
 from tribuna.policy.testing import IntegrationTestCase
-from tribuna.policy.testing import Session
 
 
 class TestSidebar(IntegrationTestCase):
