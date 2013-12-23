@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
-
-"""Setup/installation tests for this package."""
+"""Test content types."""
 
 from tribuna.policy.testing import IntegrationTestCase
 from plone import api
@@ -86,7 +85,8 @@ class TestEntryPage(IntegrationTestCase):
 
         results = old_entry_pages()
 
-        results_without_dates = [(id, title.split(',')[0]) for id, title in results]
+        results_without_dates = [
+            (id, title.split(',')[0]) for id, title in results]
 
         self.assertEquals(
             sorted(results_without_dates),

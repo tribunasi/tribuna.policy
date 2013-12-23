@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Setup/installation tests for this package."""
+"""Setup/installation tests."""
 
 from tribuna.policy.testing import IntegrationTestCase
 from plone import api

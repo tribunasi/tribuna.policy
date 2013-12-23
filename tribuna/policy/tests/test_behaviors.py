@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+"""Tests for behaviors."""
 
 from tribuna.policy.testing import IntegrationTestCase
 from tribuna.policy.testing import create_article

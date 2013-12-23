@@ -1,7 +1,6 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""Sidebar tests."""
 
-"""Sidebar tests for this package."""
 from datetime import datetime
 from plone import api
 
@@ -39,7 +38,7 @@ class TestSidebar(IntegrationTestCase):
                 obj=api.content.create(
                     container=self.tags_folder,
                     type="tribuna.content.tag",
-                    title="Tag {0}".format(i+1),
+                    title="Tag {0}".format(i + 1),
                 ),
                 transition="publish"
             )
@@ -71,8 +70,8 @@ class TestSidebar(IntegrationTestCase):
                 obj=api.content.create(
                     container=self.articles_folder,
                     type="tribuna.content.article",
-                    title="Article {0} {1}".format(i+1, i+2),
-                    subject=["Tag {0}".format(i+1), "Tag {0}".format(i+2)],
+                    title="Article {0} {1}".format(i + 1, i + 2),
+                    subject=["Tag {0}".format(i + 1), "Tag {0}".format(i + 2)],
                     locked_on_home=False,
                     effective_date=datetime(2013, 11, 7, 12, custom_minute, 0)
                 ),
@@ -85,11 +84,11 @@ class TestSidebar(IntegrationTestCase):
                 obj=api.content.create(
                     container=self.articles_folder,
                     type="tribuna.content.article",
-                    title="Article {0} {1} {2}".format(i+1, i+2, i+3),
+                    title="Article {0} {1} {2}".format(i + 1, i + 2, i + 3),
                     subject=[
-                        "Tag {0}".format(i+1),
-                        "Tag {0}".format(i+2),
-                        "Tag {0}".format(i+3)
+                        "Tag {0}".format(i + 1),
+                        "Tag {0}".format(i + 2),
+                        "Tag {0}".format(i + 3)
                     ],
                     locked_on_home=False,
                     effective_date=datetime(2013, 11, 7, 12, custom_minute, 0)
@@ -103,12 +102,13 @@ class TestSidebar(IntegrationTestCase):
                 obj=api.content.create(
                     container=self.articles_folder,
                     type="tribuna.content.article",
-                    title="Article {0} {1} {2} {3}".format(i+1, i+2, i+3, i+4),
+                    title="Article {0} {1} {2} {3}".format(
+                        i + 1, i + 2, i + 3, i + 4),
                     subject=[
-                        "Tag {0}".format(i+1),
-                        "Tag {0}".format(i+2),
-                        "Tag {0}".format(i+3),
-                        "Tag {0}".format(i+4)
+                        "Tag {0}".format(i + 1),
+                        "Tag {0}".format(i + 2),
+                        "Tag {0}".format(i + 3),
+                        "Tag {0}".format(i + 4)
                     ],
                     locked_on_home=False,
                     effective_date=datetime(2013, 11, 7, 12, custom_minute, 0)

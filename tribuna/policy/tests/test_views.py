@@ -1,12 +1,10 @@
 # -*- coding: utf-8 -*-
+"""View tests."""
 
-"""View tests for this package."""
-
+from plone import api
 from tribuna.policy.testing import IntegrationTestCase
 from tribuna.policy.testing import create_article
 from tribuna.policy.testing import populate_dummy
-
-from plone import api
 
 
 class TestHomePageViewEmpty(IntegrationTestCase):
@@ -62,16 +60,9 @@ class TestHomePageViewPopulated(IntegrationTestCase):
         self.assertEqual(self.view.is_text_view(), False)
 
         articles = self.view._get_articles()
-        import pdb; pdb.set_trace()
         self.assertEqual(articles['all'], [])
         self.assertEqual(articles['intersection'], [])
         self.assertEqual(articles['union'], [])
-
-
-
-
-
-
 
     def test_homepage_view_populated_session(self):
         """Test view with populated session."""

@@ -94,8 +94,6 @@ def populate_dummy(portal):
     portal['tags-folder']['htag'].highlight_in_navigation = True
 
 
-
-
 class TribunaPolicyLayer(PloneSandboxLayer):
 
     defaultBases = (PLONE_FIXTURE,)
