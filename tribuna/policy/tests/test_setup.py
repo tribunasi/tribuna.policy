@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 """Setup/installation tests."""
 
-from tribuna.policy.testing import IntegrationTestCase
 from plone import api
+
+from tribuna.policy.testing import IntegrationTestCase
 
 
 class TestInstall(IntegrationTestCase):

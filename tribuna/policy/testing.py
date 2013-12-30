@@ -59,7 +59,7 @@ def populate_dummy(portal):
     )
     create_article(
         container=article_fld,
-        title="Article1a",
+        title="Article 3a",
         subject=['tag3'],
     )
     create_article(

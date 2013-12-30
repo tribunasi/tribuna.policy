@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 """Test content types."""
 
-from tribuna.policy.testing import IntegrationTestCase
 from plone import api
+
+from tribuna.policy.testing import IntegrationTestCase
 
 
 class TestTag(IntegrationTestCase):
@@ -55,11 +56,6 @@ class TestEntryPage(IntegrationTestCase):
         from tribuna.content.entrypage import old_entry_pages
 
         # create a folder and a couple of entry pages
-        # api.content.create(
-        #     container=self.portal,
-        #     type='Folder',
-        #     id='entry-pages'
-        # )
         folder = self.portal['entry-pages']
         api.content.create(
             container=folder,
