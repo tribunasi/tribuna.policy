@@ -41,7 +41,7 @@ class TestHomePageViewEmpty(IntegrationTestCase):
 
 
 class TestHomePageViewPopulated(IntegrationTestCase):
-    """Test the populated home view."""
+    """Test populated home view."""
 
     def setUp(self):
         """Custom shared utility setup for tests."""
@@ -113,7 +113,7 @@ class TestTagsViewEmpty(IntegrationTestCase):
 
 
 class TestTagsViewPopulated(IntegrationTestCase):
-    """Test the populated tags view."""
+    """Test populated tags view."""
 
     def setUp(self):
         """Custom shared utility setup for tests."""
@@ -369,7 +369,7 @@ class TestMainPageViewEmpty(IntegrationTestCase):
 
 
 class TestMainPageViewPopulated(IntegrationTestCase):
-    """Test the populated home view."""
+    """Test populated main view."""
 
     def setUp(self):
         """Custom shared utility setup for tests."""

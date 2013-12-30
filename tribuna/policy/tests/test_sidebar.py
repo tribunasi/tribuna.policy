@@ -53,7 +53,7 @@ class TestSidebarFormValuesPopulated(IntegrationTestCase):
 
 
 class TestSidebar(IntegrationTestCase):
-    """Test empty home view."""
+    """Test sidebar."""
 
     def setUp(self):
         """Custom shared utility setup for tests."""

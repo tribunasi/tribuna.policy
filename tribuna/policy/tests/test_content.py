@@ -20,7 +20,7 @@ class TestTag(IntegrationTestCase):
 
 
 class TestArticle(IntegrationTestCase):
-    """Test the Tag content type."""
+    """Test the Article content type."""
 
     def setUp(self):
         """Custom shared utility setup for tests."""
