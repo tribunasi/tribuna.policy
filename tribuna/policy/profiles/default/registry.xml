@@ -94,6 +94,6 @@
       <required>False</required>
       <title>rules_file</title>
     </field>
-    <value>/++theme++tribuna.diazotheme/tribuna-rules.xml</value>
+    <value>/++theme++tribuna.diazotheme/rules.xml</value>
   </record>
 </registry>
