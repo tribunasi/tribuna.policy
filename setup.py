@@ -19,7 +19,7 @@ long_description = \
 
 setup(
     name='tribuna.policy',
-    version='0.1',
+    version='0.2dev',
     description="Policy package for Tribuna webpage",
     long_description=long_description,
     # Get more from http://pypi.python.org/pypi?%3Aaction=list_classifiers
