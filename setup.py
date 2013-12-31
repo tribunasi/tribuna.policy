@@ -20,7 +20,7 @@ long_description = \
 setup(
     name='tribuna.policy',
     version='0.1',
-    description="Policy package for Tribuna project",
+    description="Policy package for Tribuna webpage",
     long_description=long_description,
     # Get more from http://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
@@ -29,9 +29,9 @@ setup(
     ],
     keywords='tribuna, policy',
     author='Termitnjak d.o.o.',
-    author_email='info@termitnjak.com',
+    author_email='info@termitnjak.si',
     url='',
-    license='BSD',
+    license='MIT',
     packages=find_packages(exclude=['ez_setup']),
     namespace_packages=['tribuna'],
     include_package_data=True,
