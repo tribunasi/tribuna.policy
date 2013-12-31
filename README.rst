@@ -7,7 +7,7 @@ One of the packages used for Tribuna webpage. Managed by ``tribuna.buildout``.
 This is a policy package that installs all the needed parts. Also
 contains all the tests for tribuna.* packages.
 
-* `Source code @ GitHub <https://github.com/termitnjak/tribuna.policy>`_
+* `Source code @ GitHub <https://github.com/tribunasi/tribuna.policy>`_
 
 Installation
 ============
