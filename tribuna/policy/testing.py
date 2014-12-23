@@ -91,6 +91,9 @@ def populate_dummy(portal):
 
     # htag is highlighted in navigation
     portal['tags-folder']['htag'].highlight_in_navigation = True
+    # Add some text and an 'image' to htag
+    portal['tags-folder']['htag'].text = 'Highlighted tag text'
+    portal['tags-folder']['htag'].image = 'Highlighted tag image'
 
 
 class TribunaPolicyLayer(PloneSandboxLayer):

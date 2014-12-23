@@ -258,6 +258,28 @@ class TestTagsViewPopulated(IntegrationTestCase):
             sorted(articles_union, key=lambda x: x.title)
         )
 
+    def test_tag_text_and_image(self):
+        # Check on a tag that has some info
+        self.view.request.form['tags'] = 'htag'
+        self.assertEqual(
+            self.view.tag_text_and_image(),
+            {'text': 'Highlighted tag text',
+             'image': 'http://nohost/plone/tags-folder/htag/@@images/image'},
+        )
+        # Check on a tag that exists but has no info
+        self.view.request.form['tags'] = 'tag1'
+        self.assertEqual(
+            self.view.tag_text_and_image(),
+            {'text': '', 'image': None},
+        )
+        # Check on a tag that doesn't exist (should not error but return
+        # defaults)
+        self.view.request.form['tags'] = 'i-do-not-exist-tag'
+        self.assertEqual(
+            self.view.tag_text_and_image(),
+            {'text': '', 'image': None},
+        )
+
 
 class TestMainPageViewEmpty(IntegrationTestCase):
     """Test empty main view."""
